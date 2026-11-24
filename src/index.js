@@ -6,7 +6,11 @@ import { ApolloProvider } from '@apollo/client/react';
 import App from './App';
 import './App.css';
 
-const base = (process.env.PUBLIC_URL || '').replace(/\/$/, '');
+// En desarrollo CRA conserva el pathname de homepage, aunque la app se abre en /.
+// El worker debe compartir el alcance de la página que realiza las solicitudes.
+const base = process.env.NODE_ENV === 'production'
+  ? (process.env.PUBLIC_URL || '').replace(/\/$/, '')
+  : '';
 
 // Apollo Client comunica react con API graphQL mock 
 const client = new ApolloClient({
@@ -20,11 +24,14 @@ async function iniciar() {
   try {
     //MSW intercepta REST y GraphQL antes de usar React
     const { worker } = await import('./mocks/browser');
-    await worker.start({
+    const registro = await worker.start({
       serviceWorker: { url: `${base}/mockServiceWorker.js` },
       onUnhandledRequest: 'bypass',
       quiet: true,
     });
+    if (registro && !window.location.href.startsWith(registro.scope)) {
+      throw new Error('La página está fuera del alcance del Service Worker.');
+    }
   } catch (error) {
     root.render(
       <main className="contenedor error-inicio" role="alert">
