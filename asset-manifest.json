@@ -1,19 +1,19 @@
 {
   "files": {
     "main.css": "/viajes-FII-S5/static/css/main.8952988b.css",
-    "main.js": "/viajes-FII-S5/static/js/main.a1be4c51.js",
+    "main.js": "/viajes-FII-S5/static/js/main.53fe078d.js",
     "static/js/209.e7e83cfc.chunk.js": "/viajes-FII-S5/static/js/209.e7e83cfc.chunk.js",
     "static/js/699.3e31a953.chunk.js": "/viajes-FII-S5/static/js/699.3e31a953.chunk.js",
     "static/js/966.891c88dd.chunk.js": "/viajes-FII-S5/static/js/966.891c88dd.chunk.js",
     "index.html": "/viajes-FII-S5/index.html",
     "main.8952988b.css.map": "/viajes-FII-S5/static/css/main.8952988b.css.map",
-    "main.a1be4c51.js.map": "/viajes-FII-S5/static/js/main.a1be4c51.js.map",
+    "main.53fe078d.js.map": "/viajes-FII-S5/static/js/main.53fe078d.js.map",
     "209.e7e83cfc.chunk.js.map": "/viajes-FII-S5/static/js/209.e7e83cfc.chunk.js.map",
     "699.3e31a953.chunk.js.map": "/viajes-FII-S5/static/js/699.3e31a953.chunk.js.map",
     "966.891c88dd.chunk.js.map": "/viajes-FII-S5/static/js/966.891c88dd.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.8952988b.css",
-    "static/js/main.a1be4c51.js"
+    "static/js/main.53fe078d.js"
   ]
 }
